@@ -1,6 +1,6 @@
 const PetCard = () => {
     return (
-        <div>PetCard Component</div>
+        <div className="text-red-900">PetCard Component</div>
     )
 }
 
