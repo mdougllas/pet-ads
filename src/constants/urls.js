@@ -1,0 +1,1 @@
+export const petFinderBase = 'https://api.petfinder.com/v2/'
