@@ -1,14 +1,20 @@
 import axios from 'axios'
+import { useSingleton } from '../hooks/useSingleton'
 import { useState, useEffect } from 'react'
 import { PetFinderApi } from '../apis/PetFinder'
 import { PetCard } from './PetCard'
+import { GetPetFinderToken } from '../apis/GetPetFinderToken'
 
 function App() {
+    useSingleton(() => {
+        console.log("Receiving the token", GetPetFinderToken())
+    })
+
     const [animals, setAnimals] = useState([])
     const [token, setToken] = useState(null)
 
     const getToken = async () => {
-        const token = await axios.get('http://localhost:8001/api/token')
+        const token = await axios.get('http://localhost:8000/api/token')
         setToken(token.data.access_token)
     }
 
