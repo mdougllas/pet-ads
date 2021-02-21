@@ -1,5 +1,4 @@
 export const PetCard = ({ animal }) => {
-    console.log(animal)
     return (
         <div className="card">
             <div className="image">
