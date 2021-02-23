@@ -1,2 +1,2 @@
 export const petFinderBase = 'https://api.petfinder.com'
-export const petAdsBase = 'http://localhost:8000/api'
+export const petAdsBase = 'https://pet-ads-api.herokuapp.com/api'

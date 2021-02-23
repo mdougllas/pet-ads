@@ -14,15 +14,19 @@ const PetList = ({ pets, fetchPets, token, fetchToken }) => {
     }, [token, fetchToken, pets, fetchPets])
 
     if(pets.animals){
+        console.log(pets.animals)
         return(
-            <div className="flex">
-                {
-                    pets.animals.map(e => {
-                        return (
-                            <PetCard key={ e.id } animal={ e } />
-                        )
-                    })
-                }
+            <div>
+                <div className="flex flex-row flex-wrap justify-center">
+                    {
+                        pets.animals.map(e => {
+                            return (
+                                <PetCard key={ e.id } animal={ e } />
+                            )
+                        })
+                    }
+                </div>
+                <div>PREV | NEXT</div>
             </div>
         )
     } else {

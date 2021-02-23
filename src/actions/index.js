@@ -13,7 +13,7 @@ export const fetchPets = () => async (dispatch, state) => {
 
     if(token){
         const pets = await PetFinderApi.get(
-            '/v2/animals?type=cat&location=33309&limit=10&page=2&special_needs=true',
+            '/v2/animals?type=cat&location=33309&limit=12&page=2&special_needs=true',
             { headers: { 'Authorization': `Bearer ${ token }` }}
         )
         dispatch({ type: 'FETCH_PETS', payload: pets.data})
