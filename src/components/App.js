@@ -15,11 +15,11 @@ function App() {
 
             const options = {
                 enableHighAccuracy: false,
-                maximumAge        : Infinity,
-                timeout           : 6000
+                maximumAge: Infinity,
+                timeout: 3000
             }
 
-            window.navigator.geolocation.getCurrentPosition(success, error, options)
+            navigator.geolocation.getCurrentPosition(success, error, options)
         } else {
             console.log('bum')
         }
